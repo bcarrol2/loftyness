@@ -26,3 +26,16 @@ body {
 #enter-button:active {
   transform: scale(.9);
 }
+
+.results-graph-container {
+  width: 70%;
+  height: 550px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 2px solid black;
+}
+
+.select-form-container {
+  margin: 0 auto;
+  width: 40%;
+}

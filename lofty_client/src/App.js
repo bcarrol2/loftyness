@@ -1,6 +1,6 @@
 import React from 'react';
 import Homepage from './components/Homepage';
-import Resultspage from './components/Resultspage';
+import {Resultspage} from './components/Resultspage';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 
