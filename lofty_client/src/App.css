@@ -28,8 +28,9 @@ body {
 }
 
 .results-graph-container {
+  box-shadow: 10px 10px 8px #888888;
   width: 70%;
-  height: 550px;
+  height: 500px;
   margin: 0 auto;
   padding: 30px;
   border: 2px solid black;
@@ -38,4 +39,5 @@ body {
 .select-form-container {
   margin: 0 auto;
   width: 40%;
+  box-shadow: 10px 10px 8px #888888;
 }

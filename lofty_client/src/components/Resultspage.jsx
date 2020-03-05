@@ -22,11 +22,13 @@ export function Resultspage() {
   )
 
     const options = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' },
+        { value: '1', label: "Why don't you give it/ us a try?" },
+        { value: '2', label: "What do you have to lose?" },
+        { value: '3', label: "Ready to move forward? I can send over the contract right now." },
+        { value: '4', label: "When can we begin [implementation, training, etc.]?" },
+        { value: '5', label: "Come onnnnnnnnnnnnnn" },
     ];
- 
+
   const axes = React.useMemo(
     () => [
       { primary: true, type: 'linear', position: 'bottom' },
@@ -34,7 +36,7 @@ export function Resultspage() {
     ],
     []
   )
- 
+
   return (
       <div>
           <div className="results-graph-container" style={{ marginTop: '20px' }}>
@@ -42,6 +44,7 @@ export function Resultspage() {
           </div>
           <div className="select-form-container" style={{marginTop: '20px'}}>
               <Select
+                  placeholder="What closing pitch did you use?"
                   options={options}
               />
           </div>
