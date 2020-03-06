@@ -8,13 +8,14 @@ export default class Graphpage extends React.Component {
     }
 
     render(){
+        let propData = this.props.propData
         console.log(this.props, 'the passed this.props')
-        const datas = [
-            { text: 'Give us a try...', value: this.props.datata.pitch1 },
-            { text: 'Have something to lose...', value: this.props.datata.pitch2 },
-            { text: 'Ready to move forward...', value: this.props.datata.pitch3 },
-            { text: 'When do we begin...', value: this.props.datata.pitch4 },
-            { text: 'Come onnnnnn', value: this.props.datata.pitch5 }
+        const data = [
+            { text: `Give us a try... ${propData.pitch1}`, value: propData.pitch1 },
+            { text: `Nothing to lose... ${propData.pitch2}`, value: propData.pitch2 },
+            { text: `Ready to move forward... ${propData.pitch3}`, value: propData.pitch3 },
+            { text: `When do we begin... ${propData.pitch4}`, value: propData.pitch4 },
+            { text: `Come onnnnnn ${propData.pitch5}`, value: propData.pitch5 }
         ];
     
         const margin = { top: 20, right: 20, bottom: 30, left: 40 };
@@ -25,7 +26,7 @@ export default class Graphpage extends React.Component {
                     height={500}
                     width={1175}
                     margin={margin}
-                    data={datas}
+                    data={data}
                     onBarClick={this.handleBarClick}
                 />
             

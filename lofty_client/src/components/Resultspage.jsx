@@ -20,13 +20,13 @@ export default class Resultspage extends React.Component {
         console.log(`Option selected:`, selectedOption);
     };
 
-    handleChange = pitches => {
+    handleChange = pitch => {
         // e.preventDefault();
-        console.log(pitches, 'the pitches coming in')
+        console.log(pitch, 'the pitches coming in')
         const url = "http://localhost:3000/pitches/create";
 
         const body = {
-            pitches
+            pitch
         };
 
         // const token = document.querySelector('meta[name="csrf-token"]').content;
@@ -72,7 +72,7 @@ export default class Resultspage extends React.Component {
         ];
     return (
         <div>
-            <Graphpage datata={this.state.pitches} />
+            <Graphpage propData={this.state.pitches} />
             <div className="select-form-container" style={{marginTop: '20px'}}>
                 <Select
                     placeholder="What closing pitch did you use?"

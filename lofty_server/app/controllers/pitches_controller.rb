@@ -19,7 +19,7 @@ class PitchesController < ApplicationController
     end
 
     def create
-        debugger
+        # debugger
         pitch = Pitch.create!(pitch_params)
         if pitch
             render json: pitch
@@ -31,6 +31,6 @@ class PitchesController < ApplicationController
     private
 
     def pitch_params
-        params.require(:pitch).permit(:name, :value)
+        params.require(:pitch).permit(:label, :value)
     end
 end
