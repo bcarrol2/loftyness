@@ -1,6 +1,7 @@
 body {
   font-family: American Typewriter;
-  background-color: #CCCCFF;
+  background-color: black;
+  padding: 20px;
 }
 
 #enter-button {
@@ -29,24 +30,64 @@ body {
 
 .bar-graph-container {
   box-shadow: 10px 10px 8px #888888;
-  width: 80%;
+  width: 525px;
   height: 500px;
-  margin: 0 auto;
   padding: 30px;
-  border: 2px solid black;
+  border: 2px solid whitesmoke;
+  border-radius: 2%;
+}
+
+text {
+  fill: whitesmoke;
+}
+
+.domain {
+  fill: whitesmoke;
 }
 
 .select-form-container {
-  margin: 0 auto;
   width: 40%;
   box-shadow: 10px 10px 8px #888888;
 }
 
 .bar {
-  fill: rgb(60, 39, 179);
+  fill: rgb(255, 255, 156);
   /* width: 100px; */
 }
 
 .bar:hover {
-  fill: rgb(119, 10, 245);
+  fill: yellow;
+}
+
+
+.bar:nth-child(3) {
+  fill: lightgreen;
+}
+
+.bar:nth-child(3):hover {
+  fill: green;
+}
+
+.bar:nth-child(4) {
+  fill: lightskyblue;
+}
+
+.bar:nth-child(4):hover {
+  fill: navy;
+}
+
+.bar:nth-child(5) {
+  fill: violet;
+}
+
+.bar:nth-child(5):hover {
+  fill: purple;
+}
+
+.bar:nth-child(6) {
+  fill: lightsalmon;
+}
+
+.bar:nth-child(6):hover {
+  fill: orange;
 }
