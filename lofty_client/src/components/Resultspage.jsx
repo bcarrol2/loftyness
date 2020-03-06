@@ -72,12 +72,16 @@ export default class Resultspage extends React.Component {
         ];
     return (
         <div>
+            <div className="color-scheme-container">
+
+            </div>
             <Graphpage propData={this.state.pitches} />
             <div className="select-form-container" style={{marginTop: '20px'}}>
                 <Select
                     placeholder="What closing pitch did you use?"
                     options={options}
                     onChange={this.handleChange}
+                    style={{backgroundColor: 'black'}}
                 />
             </div>
         </div>

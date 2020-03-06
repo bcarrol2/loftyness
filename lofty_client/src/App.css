@@ -1,6 +1,6 @@
 body {
   font-family: American Typewriter;
-  background-color: black;
+  background-color: #202020;
   padding: 20px;
 }
 
@@ -33,7 +33,7 @@ body {
   width: 525px;
   height: 500px;
   padding: 30px;
-  border: 2px solid whitesmoke;
+  /* border: 2px solid whitesmoke; */
   border-radius: 2%;
 }
 
@@ -47,6 +47,15 @@ text {
 
 .select-form-container {
   width: 40%;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.color-scheme-container {
+  float: right;
+  /* border: 2px solid whitesmoke; */
+  border-radius: 2%;
+  height: 350px;
+  width: 50%;
   box-shadow: 10px 10px 8px #888888;
 }
 
@@ -78,6 +87,7 @@ text {
 
 .bar:nth-child(5) {
   fill: violet;
+  border: 2px solid white;
 }
 
 .bar:nth-child(5):hover {

@@ -30,7 +30,6 @@ export default class Graphpage extends React.Component {
                     data={data}
                     onBarClick={this.handleBarClick}
                 />
-            
         </div>
     )
     }
