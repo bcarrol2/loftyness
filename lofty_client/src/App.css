@@ -59,6 +59,16 @@ text {
   box-shadow: 10px 10px 8px #888888;
 }
 
+#scheme {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+/* 
+#scheme-row {
+  width: 100%;
+} */
+
 .bar {
   fill: rgb(255, 255, 156);
   /* width: 100px; */

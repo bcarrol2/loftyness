@@ -62,7 +62,6 @@ export default class Resultspage extends React.Component {
     }
 
     render(){
-        const { pitches } = this.state;
         const options = [
             { value: '1', label: "Why don't you give it/ us a try?" },
             { value: '2', label: "What do you have to lose?" },
@@ -73,7 +72,12 @@ export default class Resultspage extends React.Component {
     return (
         <div>
             <div className="color-scheme-container">
-
+                <div id="scheme" style={{ backgroundColor: 'lightgreen' }}> </div>
+                <div id="scheme" style={{ backgroundColor: 'lightskyblue' }}></div>
+                <div id="scheme" style={{ backgroundColor: 'violet' }}></div>
+                <div id="scheme" style={{ backgroundColor: 'lightsalmon' }}></div>
+                <div id="scheme" style={{ backgroundColor: 'rgb(255, 255, 156)'}}></div>
+                <p style={{ float: 'left', clear: 'both', overflow: 'auto' }}><div id="scheme" style={{ backgroundColor: 'lightgreen' }}> </div>"Why don't you give it/ us a try?"</p>
             </div>
             <Graphpage propData={this.state.pitches} />
             <div className="select-form-container" style={{marginTop: '20px'}}>
@@ -81,7 +85,6 @@ export default class Resultspage extends React.Component {
                     placeholder="What closing pitch did you use?"
                     options={options}
                     onChange={this.handleChange}
-                    style={{backgroundColor: 'black'}}
                 />
             </div>
         </div>
