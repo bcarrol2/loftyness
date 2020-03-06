@@ -32,10 +32,9 @@ export default class Graphpage extends React.Component {
     return (
         <div className="bar-graph-container">
                 <BarChart 
-                    ylabel='Closing Pitch'
+                    ylabel='Successful Closing Pitch'
                     height={500}
                     width={500}
-                    color='white'
                     margin={margin}
                     data={data}
                     onBarClick={this.handleBarClick}

@@ -71,13 +71,32 @@ export default class Resultspage extends React.Component {
         ];
     return (
         <div>
-            <div className="color-scheme-container">
-                <div id="scheme" style={{ backgroundColor: 'lightgreen' }}> </div>
-                <div id="scheme" style={{ backgroundColor: 'lightskyblue' }}></div>
-                <div id="scheme" style={{ backgroundColor: 'violet' }}></div>
-                <div id="scheme" style={{ backgroundColor: 'lightsalmon' }}></div>
-                <div id="scheme" style={{ backgroundColor: 'rgb(255, 255, 156)'}}></div>
-                <p style={{ float: 'left', clear: 'both', overflow: 'auto' }}><div id="scheme" style={{ backgroundColor: 'lightgreen' }}> </div>"Why don't you give it/ us a try?"</p>
+            <div className="color-legend-container">
+                <div id="color-row">
+                    <div id="legend" style={{ backgroundColor: 'lightgreen' }}> 
+                    </div>
+                    <p id="row-text">"Why don't you give it/ us a try?"</p>
+                </div>
+                <div id="color-row">
+                    <div id="legend" style={{ backgroundColor: 'lightskyblue' }}> 
+                    </div>
+                    <p id="row-text">"What do you have to lose?"</p>
+                </div>
+                <div id="color-row">
+                    <div id="legend" style={{ backgroundColor: 'violet' }}> 
+                    </div>
+                    <p id="row-text">"Ready to move forward? I can send over the contract right now."</p>
+                </div>
+                <div id="color-row">
+                    <div id="legend" style={{ backgroundColor: 'lightsalmon' }}> 
+                    </div>
+                    <p id="row-text">"When can we begin [implementation, training, etc.]?"</p>
+                </div>
+                <div id="color-row">
+                    <div id="legend" style={{ backgroundColor: 'rgb(255, 255, 156)' }}> 
+                    </div>
+                    <p id="row-text">"Come onnnnnnnnnnnnnn"</p>
+                </div>
             </div>
             <Graphpage propData={this.state.pitches} />
             <div className="select-form-container" style={{marginTop: '20px'}}>

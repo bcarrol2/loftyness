@@ -25,13 +25,13 @@ body {
 }
 
 #enter-button:active {
-  transform: scale(.9);
+  transform: scale(.5);
 }
 
 .bar-graph-container {
   box-shadow: 10px 10px 8px #888888;
   width: 525px;
-  height: 500px;
+  height: 550px;
   padding: 30px;
   /* border: 2px solid whitesmoke; */
   border-radius: 2%;
@@ -50,32 +50,38 @@ text {
   box-shadow: 10px 10px 8px #888888;
 }
 
-.color-scheme-container {
+.color-legend-container {
   float: right;
   /* border: 2px solid whitesmoke; */
   border-radius: 2%;
-  height: 350px;
+  height: 200px;
   width: 50%;
   box-shadow: 10px 10px 8px #888888;
 }
 
-#scheme {
-  width: 30px;
-  height: 30px;
-  margin: 10px;
-}
-/* 
-#scheme-row {
+#legent-row {
   width: 100%;
-} */
+  height: 33px;
+}
+
+#legend {
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+#row-text {
+  color: whitesmoke;
+  margin-left: 35px;
+}
 
 .bar {
   fill: rgb(255, 255, 156);
-  /* width: 100px; */
 }
 
 .bar:hover {
-  fill: yellow;
+  background-color: desaturate(yellow, 100);
+  opacity: .5;
 }
 
 
@@ -84,7 +90,8 @@ text {
 }
 
 .bar:nth-child(3):hover {
-  fill: green;
+  background-color: desaturate(green, 100);
+  opacity: .5;
 }
 
 .bar:nth-child(4) {
@@ -92,7 +99,8 @@ text {
 }
 
 .bar:nth-child(4):hover {
-  fill: navy;
+  background-color: desaturate(navy, 100);
+  opacity: .5;
 }
 
 .bar:nth-child(5) {
@@ -101,7 +109,8 @@ text {
 }
 
 .bar:nth-child(5):hover {
-  fill: purple;
+  background-color: desaturate(purple, 100);
+  opacity: .5;
 }
 
 .bar:nth-child(6) {
@@ -109,5 +118,6 @@ text {
 }
 
 .bar:nth-child(6):hover {
-  fill: orange;
+  background-color: desaturate(orange, 100);
+  opacity: .5;
 }
