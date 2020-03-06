@@ -1,6 +1,18 @@
 import React from 'react';
 import Graphpage from './Graphpage';
 import Select from 'react-select';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure({
+    autoClose: 5000,
+    draggable: false,
+    hideProgressBar: true
+});
+toast("You can click the bars on the graph for more info!", {
+    position: toast.POSITION.BOTTOM_CENTER,
+    className: 'toaster'
+});
 
 export default class Resultspage extends React.Component {
     constructor(){
@@ -21,7 +33,6 @@ export default class Resultspage extends React.Component {
     };
 
     handleChange = pitch => {
-        // e.preventDefault();
         console.log(pitch, 'the pitches coming in')
         const url = "http://localhost:3000/pitches/create";
 

@@ -57,6 +57,7 @@ text {
   height: 200px;
   width: 50%;
   box-shadow: 10px 10px 8px #888888;
+  margin: 20px;
 }
 
 #legent-row {
@@ -73,6 +74,16 @@ text {
 #row-text {
   color: whitesmoke;
   margin-left: 35px;
+}
+
+.toaster {
+  background-color: #202020;
+  width: 379px;
+  height: 125px;
+  border: 2px solid whitesmoke;
+  border-radius: 3px;
+  background-image: linear-gradient(to bottom right, #9933FF, whitesmoke);
+  color: black;
 }
 
 .bar {
