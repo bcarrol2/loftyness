@@ -3,11 +3,11 @@ class PitchesController < ApplicationController
 
     def index
         @pitches = Pitch.all
-        first_pitch = @pitches.where(value: 1)
-        second_pitch = @pitches.where(value: 2)
-        third_pitch = @pitches.where(value: 3)
-        fourth_pitch = @pitches.where(value: 4)
-        fifth_pitch = @pitches.where(value: 5)
+        first_pitch = @pitches.where(value: 1).count
+        second_pitch = @pitches.where(value: 2).count
+        third_pitch = @pitches.where(value: 3).count
+        fourth_pitch = @pitches.where(value: 4).count
+        fifth_pitch = @pitches.where(value: 5).count
         pitches_data = {
             pitch1: first_pitch,
             pitch2: second_pitch,

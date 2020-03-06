@@ -27,9 +27,9 @@ body {
   transform: scale(.9);
 }
 
-.results-graph-container {
+.bar-graph-container {
   box-shadow: 10px 10px 8px #888888;
-  width: 70%;
+  width: 80%;
   height: 500px;
   margin: 0 auto;
   padding: 30px;
@@ -40,4 +40,13 @@ body {
   margin: 0 auto;
   width: 40%;
   box-shadow: 10px 10px 8px #888888;
+}
+
+.bar {
+  fill: rgb(60, 39, 179);
+  /* width: 100px; */
+}
+
+.bar:hover {
+  fill: rgb(119, 10, 245);
 }
