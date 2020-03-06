@@ -2,22 +2,9 @@ import React from 'react';
 import BarChart from 'react-bar-chart';
 
 export default class Graphpage extends React.Component {
-    constructor(){
-        super()
-
-        this.state = {
-            pitches: []
-        }
-    }
 
     handleBarClick(element, id) {
         console.log(`The bin ${element.text} with id ${id} was clicked`);
-    }
-
-    handleChange(e){
-        e.preventDefault();
-        const url = "http://localhost:3000/pitches/create";
-        
     }
 
     render(){
@@ -39,7 +26,7 @@ export default class Graphpage extends React.Component {
                     width={1175}
                     margin={margin}
                     data={datas}
-                    onBarClick={this.handleBarClick}/>
+                    onBarClick={this.handleBarClick}
                 />
             
         </div>

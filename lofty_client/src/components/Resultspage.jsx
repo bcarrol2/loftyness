@@ -15,6 +15,39 @@ export default class Resultspage extends React.Component {
         this.getData()
     }
 
+    handleChange = selectedOption => {
+        this.setState({ selectedOption });
+        console.log(`Option selected:`, selectedOption);
+    };
+
+    handleChange = pitches => {
+        // e.preventDefault();
+        console.log(pitches, 'the pitches coming in')
+        const url = "http://localhost:3000/pitches/create";
+
+        const body = {
+            pitches
+        };
+
+        // const token = document.querySelector('meta[name="csrf-token"]').content;
+        fetch(url, {
+            method: "POST",
+            headers: {
+                // "X-CSRF-Token": token,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error("Network response was not ok.");
+            })
+            .then(window.location.reload())
+            .catch(error => console.log(error.message));
+    }
+
     getData() {
         const url = "http://localhost:3000/pitches/index";
         fetch(url)
@@ -29,6 +62,7 @@ export default class Resultspage extends React.Component {
     }
 
     render(){
+        const { pitches } = this.state;
         const options = [
             { value: '1', label: "Why don't you give it/ us a try?" },
             { value: '2', label: "What do you have to lose?" },
@@ -43,6 +77,7 @@ export default class Resultspage extends React.Component {
                 <Select
                     placeholder="What closing pitch did you use?"
                     options={options}
+                    onChange={this.handleChange}
                 />
             </div>
         </div>
