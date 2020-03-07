@@ -1,17 +1,15 @@
 import React from 'react';
 import Graphpage from './Graphpage';
 import Select from 'react-select';
-import { toast } from 'react-toastify';
+import { CookiesProvider } from 'react-cookie';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-toast.configure({
-    autoClose: 5000,
-    draggable: false,
-    hideProgressBar: true
-});
-toast("You can click the bars on the graph for more info!", {
+
+toast.info("You can click on the bars in the graph for more info!", {
     position: toast.POSITION.BOTTOM_CENTER,
-    className: 'toaster'
+    className: 'toaster',
+    hideProgressBar: true
 });
 
 export default class Resultspage extends React.Component {
@@ -26,11 +24,6 @@ export default class Resultspage extends React.Component {
     componentDidMount(){
         this.getData()
     }
-
-    handleChange = selectedOption => {
-        this.setState({ selectedOption });
-        console.log(`Option selected:`, selectedOption);
-    };
 
     handleChange = pitch => {
         console.log(pitch, 'the pitches coming in')
@@ -72,7 +65,11 @@ export default class Resultspage extends React.Component {
             .catch(() => this.props.history.push("/pitches"));
     }
 
+    notify = () => toast("Wow so easy !");
+    
+
     render(){
+        
         const options = [
             { value: '1', label: "Why don't you give it/ us a try?" },
             { value: '2', label: "What do you have to lose?" },
@@ -82,6 +79,7 @@ export default class Resultspage extends React.Component {
         ];
     return (
         <div>
+            <CookiesProvider>
             <div className="color-legend-container">
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'lightgreen' }}> 
@@ -117,6 +115,8 @@ export default class Resultspage extends React.Component {
                     onChange={this.handleChange}
                 />
             </div>
+            <ToastContainer />
+            </CookiesProvider>
         </div>
     )
   }
