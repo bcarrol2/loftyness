@@ -95,6 +95,9 @@ text {
   opacity: .5;
 }
 
+.bar:hover .tips {
+  display: block;
+}
 
 .bar:nth-child(3) {
   fill: lightgreen;

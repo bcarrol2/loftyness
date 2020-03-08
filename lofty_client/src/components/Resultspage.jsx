@@ -1,16 +1,6 @@
 import React from 'react';
 import Graphpage from './Graphpage';
 import Select from 'react-select';
-import { CookiesProvider } from 'react-cookie';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
-
-toast.info("You can click on the bars in the graph for more info!", {
-    position: toast.POSITION.BOTTOM_CENTER,
-    className: 'toaster',
-    hideProgressBar: true
-});
 
 export default class Resultspage extends React.Component {
     constructor(){
@@ -26,7 +16,6 @@ export default class Resultspage extends React.Component {
     }
 
     handleChange = pitch => {
-        console.log(pitch, 'the pitches coming in')
         const url = "http://localhost:3000/pitches/create";
 
         const body = {
@@ -63,13 +52,9 @@ export default class Resultspage extends React.Component {
             })
             .then(response => this.setState({ pitches: response }))
             .catch(() => this.props.history.push("/pitches"));
-    }
-
-    notify = () => toast("Wow so easy !");
-    
+    }    
 
     render(){
-        
         const options = [
             { value: '1', label: "Why don't you give it/ us a try?" },
             { value: '2', label: "What do you have to lose?" },
@@ -79,7 +64,6 @@ export default class Resultspage extends React.Component {
         ];
     return (
         <div>
-            <CookiesProvider>
             <div className="color-legend-container">
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'lightgreen' }}> 
@@ -115,8 +99,6 @@ export default class Resultspage extends React.Component {
                     onChange={this.handleChange}
                 />
             </div>
-            <ToastContainer />
-            </CookiesProvider>
         </div>
     )
   }
