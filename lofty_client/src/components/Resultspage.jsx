@@ -90,6 +90,25 @@ export default class Resultspage extends React.Component {
                     </div>
                     <p id="row-text">"Come onnnnnnnnnnnnnn"</p>
                 </div>
+                <p className="tips-text">Tips?</p>
+                <div className="tips">
+                    <ul>
+                        <li>Generally most sales are done on wednesday</li>
+                        <li>Most sales from the week prior for us were on friday
+                            <ul>
+                                <li>Possibly because many people just got paid</li>
+                            </ul>
+                        </li>
+                        <li>With the most successful closing pitch being "Come onnnnnnnnnnnnnn"
+                            <ul>
+                                <li>Probably because people are in a lighter mood on friday</li>
+                                <li>Also many people have eaten after 2pm and studies show people are 
+                                    more likely to say yes after eating.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <Graphpage propData={this.state.pitches} />
             <div className="select-form-container" style={{marginTop: '20px'}}>

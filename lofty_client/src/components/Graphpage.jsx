@@ -2,22 +2,6 @@ import React from 'react';
 import BarChart from 'react-bar-chart';
 
 export default class Graphpage extends React.Component {
-    constructor(){
-        super()
-
-        this.state = {
-            showInfo: false
-        }
-        this.handleBarClick = this.handleBarClick.bind(this)
-    }
-
-    handleBarClick(element, id) {
-        console.log(`The bin ${element.text} with id ${id} was clicked`);
-        this.setState({
-            showInfo: !this.state.showInfo
-        })
-    }
-
     render(){
         let propData = this.props.propData
         const data = [
@@ -39,12 +23,6 @@ export default class Graphpage extends React.Component {
                     data={data}
                     onBarClick={this.handleBarClick}
                 />
-                {
-                    this.state.showInfo?
-                    <div id="info-display">
-                    </div>
-                    : null
-                }
         </div>
     )
     }

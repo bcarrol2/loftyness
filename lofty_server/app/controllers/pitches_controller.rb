@@ -19,7 +19,6 @@ class PitchesController < ApplicationController
     end
 
     def create
-        # debugger
         pitch = Pitch.create!(pitch_params)
         if pitch
             render json: pitch
