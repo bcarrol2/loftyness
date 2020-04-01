@@ -22,11 +22,9 @@ export default class Resultspage extends React.Component {
             pitch
         };
 
-        // const token = document.querySelector('meta[name="csrf-token"]').content;
         fetch(url, {
             method: "POST",
             headers: {
-                // "X-CSRF-Token": token,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(body)
@@ -56,10 +54,10 @@ export default class Resultspage extends React.Component {
 
     render(){
         const options = [
-            { value: '1', label: "Why don't you give it/ us a try?" },
-            { value: '2', label: "What do you have to lose?" },
+            { value: '1', label: "I'm jealous! I would live here!" },
+            { value: '2', label: "One of the best decisions you'll ever make!" },
             { value: '3', label: "Ready to move forward? I can send over the contract right now." },
-            { value: '4', label: "When can we begin [implementation, training, etc.]?" },
+            { value: '4', label: "Your family is guaranteed to love it!" },
             { value: '5', label: "Come onnnnnnnnnnnnnn" },
         ];
     return (
@@ -68,12 +66,12 @@ export default class Resultspage extends React.Component {
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'lightgreen' }}> 
                     </div>
-                    <p id="row-text">"Why don't you give it/ us a try?"</p>
+                    <p id="row-text">"I'm jealous! I would live here!"</p>
                 </div>
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'lightskyblue' }}> 
                     </div>
-                    <p id="row-text">"What do you have to lose?"</p>
+                    <p id="row-text">"One of the best decisions you'll ever make!"</p>
                 </div>
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'violet' }}> 
@@ -83,7 +81,7 @@ export default class Resultspage extends React.Component {
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'lightsalmon' }}> 
                     </div>
-                    <p id="row-text">"When can we begin [implementation, training, etc.]?"</p>
+                    <p id="row-text">"Your family is guaranteed to love it!"</p>
                 </div>
                 <div id="color-row">
                     <div id="legend" style={{ backgroundColor: 'rgb(255, 255, 156)' }}> 

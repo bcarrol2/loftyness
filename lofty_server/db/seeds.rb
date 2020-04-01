@@ -8,7 +8,7 @@
 
 
 21.times do
-    pitch1 = Pitch.create(label: "Why don't you give it/ us a try?", value: 1)
+    pitch1 = Pitch.create(label: "I'm jealous! I would live here!", value: 1)
 end
 
 30.times do
@@ -20,7 +20,7 @@ end
 end
 
 11.times do
-    pitch4 = Pitch.create(label: "When can we begin [implementation, training, etc.]?", value: 4)
+    pitch4 = Pitch.create(label: "Your family is guaranteed to love it!", value: 4)
 end
 
 88.times do

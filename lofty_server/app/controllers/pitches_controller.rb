@@ -3,19 +3,18 @@ class PitchesController < ApplicationController
 
     def index
         @pitches = Pitch.all
-        first_pitch = @pitches.where(value: 1).count
-        second_pitch = @pitches.where(value: 2).count
-        third_pitch = @pitches.where(value: 3).count
-        fourth_pitch = @pitches.where(value: 4).count
-        fifth_pitch = @pitches.where(value: 5).count
         pitches_data = {
-            pitch1: first_pitch,
-            pitch2: second_pitch,
-            pitch3: third_pitch,
-            pitch4: fourth_pitch,
-            pitch5: fifth_pitch,
+            pitch1: pitch_count(1),
+            pitch2: pitch_count(2),
+            pitch3: pitch_count(3),
+            pitch4: pitch_count(4),
+            pitch5: pitch_count(5)
         }
         render json: pitches_data
+    end
+
+    def pitch_count(num)
+        @pitches.where(value: num).size
     end
 
     def create
@@ -30,6 +29,6 @@ class PitchesController < ApplicationController
     private
 
     def pitch_params
-        params.require(:pitch).permit(:name, :value)
+        params.require(:pitch).permit(:label, :value)
     end
 end

@@ -4,6 +4,7 @@ import BarChart from 'react-bar-chart';
 export default class Graphpage extends React.Component {
     render(){
         let propData = this.props.propData
+        console.log(propData, 'the props')
         const data = [
             { text: propData.pitch1, value: propData.pitch1 },
             { text: propData.pitch2, value: propData.pitch2 },
